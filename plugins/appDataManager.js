@@ -10,7 +10,7 @@ export default (ctx, inject ) => {
 
   const appDataManager = {
 
-    fetchMovieList(page) {
+    fetchMovieList(page,start,end) {
       return repositories.movie.movieList(page)
     },
 
@@ -24,6 +24,9 @@ export default (ctx, inject ) => {
 
     fetchMovieCredits(id) {
       return repositories.movie.movieCredits(id)
+    },
+    fetchFilterMovie(page,start,end) {
+      return repositories.movie.movieFilterByDate(page,start,end)
     },
   }
 
